@@ -1,6 +1,6 @@
-import { AsyncPipe, NgIf, isPlatformBrowser } from "@angular/common";
-import { Component, Inject, PLATFORM_ID } from "@angular/core";
-import { interval, map, of } from "rxjs";
+import { AsyncPipe, NgIf } from "@angular/common";
+import { Component } from "@angular/core";
+import { StateService } from "../../services/state/state.service";
 
 @Component({
   selector: "app-page-lazy-one",
@@ -10,16 +10,7 @@ import { interval, map, of } from "rxjs";
   styleUrl: "./page-lazy-one.component.scss",
 })
 export class PageLazyOneComponent {
-  state = (isPlatformBrowser(this.platformId) ? interval(1000) : of(0)).pipe(
-    map((value) => {
-      return {
-        timePassedInSeconds: value,
-        platform: isPlatformBrowser(this.platformId) ? "Browser" : "Server",
-      };
-    })
-  );
-
-  constructor(@Inject(PLATFORM_ID) private platformId: string) {}
+  constructor(public stateService: StateService) {}
 }
 
 export default PageLazyOneComponent;

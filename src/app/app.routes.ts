@@ -8,7 +8,12 @@ export const routes: Routes = [
     //loadComponent: () => import("./pages/home/home.component"),
   },
   {
-    path: "lazy-page-one",
+    path: "lazy-one",
     loadComponent: () => import("./pages/lazy-one/page-lazy-one.component"),
+  },
+  {
+    path: "control-flow",
+    loadComponent: () =>
+      import("./pages/page-control-flow/page-control-flow.component"),
   },
 ];
