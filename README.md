@@ -10,4 +10,4 @@ This is just a small application that highlights some of the new features of Ang
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-It is using SSR. Feel free to experiment with disabling JavaScript and also with using SPA navigation vs. reloading the page to see the different behaviors.
+It is using SSR. Feel free to experiment with disabling JavaScript and also with using SPA navigation vs. reloading the page to see the different behaviors. Also look at the console, as some examples log something there.

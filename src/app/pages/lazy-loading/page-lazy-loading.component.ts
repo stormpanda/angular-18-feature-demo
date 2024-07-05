@@ -3,7 +3,7 @@ import { Component } from "@angular/core";
 import { StateService } from "../../services/state/state.service";
 
 @Component({
-  selector: "app-page-lazy-one",
+  selector: "app-page-lazy-loading",
   standalone: true,
   imports: [NgIf, AsyncPipe],
   templateUrl: "./page-lazy-loading.component.html",

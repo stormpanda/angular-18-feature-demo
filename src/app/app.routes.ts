@@ -9,11 +9,16 @@ export const routes: Routes = [
   },
   {
     path: "lazy-loading",
-    loadComponent: () => import("./pages/lazy-one/page-lazy-loading.component"),
+    loadComponent: () =>
+      import("./pages/lazy-loading/page-lazy-loading.component"),
   },
   {
     path: "control-flow",
     loadComponent: () =>
-      import("./pages/page-control-flow/page-control-flow.component"),
+      import("./pages/control-flow/page-control-flow.component"),
+  },
+  {
+    path: "signals",
+    loadComponent: () => import("./pages/signals/page-signals.component"),
   },
 ];
