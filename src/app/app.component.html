@@ -226,7 +226,21 @@
         </defs>
       </svg>
       <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <p>
+        Congratulations! Your app is running in the {{ getPlatformName() }}. 🎉
+      </p>
+      <ul>
+        <li>
+          <a [routerLink]="['/']" routerLinkActive="router-link-active">Home</a>
+        </li>
+        <li>
+          <a
+            [routerLink]="['/lazy-page-one']"
+            routerLinkActive="router-link-active"
+            >Lazy Page One</a
+          >
+        </li>
+      </ul>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
