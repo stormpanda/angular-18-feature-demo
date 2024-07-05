@@ -227,14 +227,17 @@
       </svg>
       <h1>Hello, {{ title }}</h1>
       <p>
-        Congratulations! Your app is running in the {{ getPlatformName() }}. 🎉
+        Congratulations! Your app was rendered in the {{ getPlatformName() }}.
+        🎉
       </p>
       <ul>
         <li>
           <a [routerLink]="['/']" routerLinkActive="router-link-active">Home</a>
         </li>
         <li>
-          <a [routerLink]="['/lazy-one']" routerLinkActive="router-link-active"
+          <a
+            [routerLink]="['/lazy-loading']"
+            routerLinkActive="router-link-active"
             >Lazy Loading</a
           >
         </li>

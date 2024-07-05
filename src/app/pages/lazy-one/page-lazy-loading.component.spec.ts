@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PageLazyOneComponent } from "./page-lazy-one.component";
+import { PageLazyLoadingComponent } from "./page-lazy-loading.component";
 
 describe("LazyPageOneComponent", () => {
-  let component: PageLazyOneComponent;
-  let fixture: ComponentFixture<PageLazyOneComponent>;
+  let component: PageLazyLoadingComponent;
+  let fixture: ComponentFixture<PageLazyLoadingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PageLazyOneComponent],
+      imports: [PageLazyLoadingComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PageLazyOneComponent);
+    fixture = TestBed.createComponent(PageLazyLoadingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
