@@ -39,7 +39,8 @@
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
-            }
+            },
+            "namedChunks": true
           },
           "configurations": {
             "production": {
