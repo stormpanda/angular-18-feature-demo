@@ -1,5 +1,6 @@
+<h1>Lazy loading example</h1>
+
 <ng-container *ngIf="stateService.state$ | async as state">
-  <p>lazy-page-one works!</p>
   <p>Content was rendered by: {{ state.platform }}</p>
-  <p>Time passed in seconds: {{ state.timePassedInSeconds }}</p>
+  <p>Browser is waiting for timer... {{ state.finishedMessage }}</p>
 </ng-container>

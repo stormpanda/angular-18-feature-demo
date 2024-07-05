@@ -1,15 +1,22 @@
 import { isPlatformBrowser } from "@angular/common";
 import { Inject, Injectable, PLATFORM_ID } from "@angular/core";
-import { interval, map, of } from "rxjs";
+import { map, of, timer } from "rxjs";
 
 @Injectable({
   providedIn: "root",
 })
 export class StateService {
-  state$ = (isPlatformBrowser(this.platformId) ? interval(1000) : of(0)).pipe(
-    map((value) => {
+  private timeToLetPass = 3000;
+
+  private finishedMessage$ = isPlatformBrowser(this.platformId)
+    ? timer(this.timeToLetPass).pipe(map(() => "finished!"))
+    : of("(and will replace this)");
+
+  state$ = this.finishedMessage$.pipe(
+    map((finishedMessage) => {
       return {
-        timePassedInSeconds: value,
+        someNumbers: [1, 2, 3],
+        finishedMessage,
         platform: isPlatformBrowser(this.platformId) ? "Browser" : "Server",
       };
     })
