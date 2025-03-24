@@ -1,10 +1,10 @@
 import { Component, effect, input, output } from "@angular/core";
 
 @Component({
-    selector: "app-signal-based",
-    imports: [],
-    templateUrl: "./signal-based.component.html",
-    styleUrl: "./signal-based.component.scss"
+  selector: "app-signal-based",
+  imports: [],
+  templateUrl: "./signal-based.component.html",
+  styleUrl: "./signal-based.component.scss",
 })
 export class SignalBasedComponent {
   number = input<number>(0);

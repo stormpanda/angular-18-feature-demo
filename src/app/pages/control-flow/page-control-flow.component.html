@@ -1,24 +1,24 @@
 <h1>Control flow example</h1>
 
-@if (stateService.state$| async; as state) {
-<div>
-  <p>Content was rendered by: {{ state.platform }}</p>
-  <p>Browser is waiting for timer... {{ state.finishedMessage }}</p>
-</div>
+@if (stateService.state$ | async; as state) {
+  <div>
+    <p>Content was rendered by: {{ state.platform }}</p>
+    <p>Browser is waiting for timer... {{ state.finishedMessage }}</p>
+  </div>
 
-<h2>Deferred stuff</h2>
+  <h2>Deferred stuff</h2>
 
-@defer (on timer(3)) {
-<p>This text is not deferred, but</p>
-<app-deferred />
-} @placeholder {
-<p>This is a placeholder</p>
-}
-
-<h2>{{ "@" }}for loop example</h2>
-<div>
-  @for (number of state.someNumbers; track number) {
-  <p>Number: {{ number }}</p>
+  @defer (on timer(3)) {
+    <p>This text is not deferred, but</p>
+    <app-deferred />
+  } @placeholder {
+    <p>This is a placeholder</p>
   }
-</div>
+
+  <h2>{{ "@" }}for loop example</h2>
+  <div>
+    @for (number of state.someNumbers; track number) {
+      <p>Number: {{ number }}</p>
+    }
+  </div>
 }

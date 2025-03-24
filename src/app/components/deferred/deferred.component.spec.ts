@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { DeferredComponent } from './deferred.component';
+import { DeferredComponent } from "./deferred.component";
 
-describe('DeferredComponent', () => {
+describe("DeferredComponent", () => {
   let component: DeferredComponent;
   let fixture: ComponentFixture<DeferredComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DeferredComponent]
-    })
-    .compileComponents();
+      imports: [DeferredComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(DeferredComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

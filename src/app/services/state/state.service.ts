@@ -19,7 +19,7 @@ export class StateService {
         finishedMessage,
         platform: isPlatformBrowser(this.platformId) ? "Browser" : "Server",
       };
-    })
+    }),
   );
 
   constructor(@Inject(PLATFORM_ID) private platformId: string) {}

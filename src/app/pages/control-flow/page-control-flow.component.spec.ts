@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PageControlFlowComponent } from './page-control-flow.component';
+import { PageControlFlowComponent } from "./page-control-flow.component";
 
-describe('PageControlFlowComponent', () => {
+describe("PageControlFlowComponent", () => {
   let component: PageControlFlowComponent;
   let fixture: ComponentFixture<PageControlFlowComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PageControlFlowComponent]
-    })
-    .compileComponents();
+      imports: [PageControlFlowComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PageControlFlowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

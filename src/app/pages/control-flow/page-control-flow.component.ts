@@ -4,10 +4,10 @@ import { DeferredComponent } from "../../components/deferred/deferred.component"
 import { StateService } from "../../services/state/state.service";
 
 @Component({
-    selector: "app-page-control-flow",
-    imports: [AsyncPipe, DeferredComponent],
-    templateUrl: "./page-control-flow.component.html",
-    styleUrl: "./page-control-flow.component.scss"
+  selector: "app-page-control-flow",
+  imports: [AsyncPipe, DeferredComponent],
+  templateUrl: "./page-control-flow.component.html",
+  styleUrl: "./page-control-flow.component.scss",
 })
 export class PageControlFlowComponent {
   constructor(public stateService: StateService) {}
