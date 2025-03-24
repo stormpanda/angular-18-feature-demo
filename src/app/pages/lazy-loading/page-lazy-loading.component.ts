@@ -1,5 +1,5 @@
 import { AsyncPipe, NgIf } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { StateService } from "../../services/state/state.service";
 
 @Component({
@@ -9,7 +9,7 @@ import { StateService } from "../../services/state/state.service";
   styleUrl: "./page-lazy-loading.component.scss",
 })
 export class PageLazyLoadingComponent {
-  constructor(public stateService: StateService) {}
+  stateService = inject(StateService);
 }
 
 export default PageLazyLoadingComponent;

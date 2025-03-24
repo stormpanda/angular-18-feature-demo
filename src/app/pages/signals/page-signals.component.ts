@@ -1,4 +1,4 @@
-import { Component, computed, effect, signal } from "@angular/core";
+import { Component, computed, effect, signal, inject } from "@angular/core";
 import { toSignal } from "@angular/core/rxjs-interop";
 import { SignalBasedComponent } from "../../components/signal-based/signal-based.component";
 import { StateService } from "../../services/state/state.service";
@@ -10,11 +10,13 @@ import { StateService } from "../../services/state/state.service";
   imports: [SignalBasedComponent],
 })
 export class PageSignalsComponent {
+  stateService = inject(StateService);
+
   state = toSignal(this.stateService.state$);
   number = signal(0);
   numberSquared = computed(() => this.number() ** 2);
 
-  constructor(public stateService: StateService) {
+  constructor() {
     effect(() => {
       console.log("From effect: Number changed to", this.number());
     });

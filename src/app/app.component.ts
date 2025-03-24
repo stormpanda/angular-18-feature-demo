@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from "@angular/common";
-import { Component, Inject, PLATFORM_ID } from "@angular/core";
+import { Component, PLATFORM_ID, inject } from "@angular/core";
 import { RouterLink, RouterOutlet } from "@angular/router";
 
 @Component({
@@ -9,9 +9,9 @@ import { RouterLink, RouterOutlet } from "@angular/router";
   styleUrl: "./app.component.scss",
 })
 export class AppComponent {
-  title = "angular-18-feature-demo";
+  private platformId = inject(PLATFORM_ID);
 
-  constructor(@Inject(PLATFORM_ID) private platformId: string) {}
+  title = "angular-18-feature-demo";
 
   getPlatformName() {
     return isPlatformBrowser(this.platformId) ? "Browser" : "Server";

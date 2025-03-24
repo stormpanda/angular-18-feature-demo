@@ -1,5 +1,5 @@
 import { AsyncPipe } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { DeferredComponent } from "../../components/deferred/deferred.component";
 import { StateService } from "../../services/state/state.service";
 
@@ -10,7 +10,7 @@ import { StateService } from "../../services/state/state.service";
   styleUrl: "./page-control-flow.component.scss",
 })
 export class PageControlFlowComponent {
-  constructor(public stateService: StateService) {}
+  stateService = inject(StateService);
 }
 
 export default PageControlFlowComponent;

@@ -1,11 +1,13 @@
 import { isPlatformBrowser } from "@angular/common";
-import { Inject, Injectable, PLATFORM_ID } from "@angular/core";
+import { Injectable, PLATFORM_ID, inject } from "@angular/core";
 import { map, of, timer } from "rxjs";
 
 @Injectable({
   providedIn: "root",
 })
 export class StateService {
+  private platformId = inject(PLATFORM_ID);
+
   private timeToLetPass = 3000;
 
   private finishedMessage$ = isPlatformBrowser(this.platformId)
@@ -21,6 +23,4 @@ export class StateService {
       };
     }),
   );
-
-  constructor(@Inject(PLATFORM_ID) private platformId: string) {}
 }
