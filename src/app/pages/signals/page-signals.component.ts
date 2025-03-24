@@ -4,11 +4,10 @@ import { SignalBasedComponent } from "../../components/signal-based/signal-based
 import { StateService } from "../../services/state/state.service";
 
 @Component({
-  selector: "app-page-signals",
-  standalone: true,
-  templateUrl: "./page-signals.component.html",
-  styleUrl: "./page-signals.component.scss",
-  imports: [SignalBasedComponent],
+    selector: "app-page-signals",
+    templateUrl: "./page-signals.component.html",
+    styleUrl: "./page-signals.component.scss",
+    imports: [SignalBasedComponent]
 })
 export class PageSignalsComponent {
   state = toSignal(this.stateService.state$);
